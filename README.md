@@ -1,4 +1,4 @@
-## [Youtube TV] (https://rishabhkesarwani.github.com/YoutubeTV/)
+[Youtube TV](https://rishabhkesarwani.github.com/YoutubeTV/)
 Youtube TV application built in Electron JS.
 
 ## To Build
