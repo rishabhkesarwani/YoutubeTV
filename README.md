@@ -1,5 +1,5 @@
 ## Youtube TV
-Youtube TV application built in Electron JS
+Youtube TV application built in Electron JS.
 
 ## To Build
 
