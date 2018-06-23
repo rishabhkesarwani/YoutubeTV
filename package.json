@@ -1,22 +1,53 @@
 {
-  "name": "electron-quick-start",
+  "name": "YoutubeTV",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "Youtube TV Application for Mac",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+	"postinstall": "install-app-deps",
+	"start": "npm install && electron .",
+	"pack": "build --dir",
+	"dist": "build"
+  },
+  "build": {
+	"appId": "com.rishabh.youtubetv",
+	"dmg": {
+	  "contents": [
+		{
+		  "x": 110,
+		  "y": 150
+		},
+		{
+		  "x": 240,
+		  "y": 150,
+		  "type": "link",
+		  "path": "/Applications"
+		}
+	  ]
+	},
+	"linux": {
+	  "target": [
+		"AppImage",
+		"deb"
+	  ]
+	},
+	"win": {
+	  "target": "squirrel",
+	  "icon": "build/icon.ico"
+	}
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+	"Electron",
+	"quick",
+	"start",
+	"tutorial",
+	"demo"
   ],
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^2.0.0"
+	"electron": "^2.0.0",
+	"electron-builder": "^20.15.1"
   }
 }
